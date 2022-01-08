@@ -1,7 +1,8 @@
 body {
-    background-image: url('./assets/bg.jpg');
+    background-image: url('./assets/background.png');
     font-family: 'Pangolin', cursive;
     font-size: large;
+    color: aliceblue;
 }
 
 .display_inline {

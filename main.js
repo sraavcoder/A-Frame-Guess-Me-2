@@ -1,12 +1,12 @@
 let words = [
   {
     "inputs": 5,
-    "category": "Sports",
+    "category": "Sport",
     "word": "Chess",
   },
   {
     "inputs": 5,
-    "category": "Dish",
+    "category": "Food Item",
     "word": "Pizza",
   },
   {
@@ -22,16 +22,16 @@ $(document).ready(function () {
 
 function fillBlanks(){
   const randomWord = words[Math.floor(Math.random() * words.length)];
-  var gameOver=false
-
 
   $("#blanks").empty();
+
   for (let i = 0; i < randomWord.inputs; i++) {
       let input_html = `<span class="fill_blanks" id="input_${i}">_</span>`
       $("#blanks").append(input_html)
   }
 
-  $("#hint").html(randomWord.category)
+  $("#hint").html(randomWord.category);
+  var gameOver = false
   $(".clickable").click(function () {
       var correctGuess = false;      
       let id = $(this).attr("id");
